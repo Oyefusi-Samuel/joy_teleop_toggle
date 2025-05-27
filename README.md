@@ -42,7 +42,8 @@ sudo apt install ros-<ros2-distro>-joy
 
    ```bash
    cd ~/ros2_ws/src
-   git clone https://github.com/yourusername/joy_teleop_toggle.git
+   git clone https://github.com/Oyefusi-Samuel/joy_teleop_toggle.git
+```
 
 2. Build the package with colcon:
 
@@ -50,12 +51,12 @@ sudo apt install ros-<ros2-distro>-joy
 cd ~/ros2_ws
 colcon build --packages-select joy_teleop_toggle --symlink-install
 ```
-Replace <ros2-distro> with your distribution (e.g. foxy, humble, iron).
 
 3. Source your workspace:
 ```
 source ~/ros2_ws/install/setup.bash
 ```
+
 ![image](https://github.com/user-attachments/assets/8ad88e5b-4f2d-4a5f-b028-e256bf68254d)
 
 # Usage
