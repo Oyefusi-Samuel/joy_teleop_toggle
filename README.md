@@ -46,50 +46,50 @@ sudo apt install ros-<ros2-distro>-joy
 
 2. Build the package with colcon:
 
-   ```bash
+```bash
 cd ~/ros2_ws
 colcon build --packages-select joy_teleop_toggle --symlink-install
+```
 Replace <ros2-distro> with your distribution (e.g. foxy, humble, iron).
 
 3. Source your workspace:
-
+```
 source ~/ros2_ws/install/setup.bash
+```
+![image](https://github.com/user-attachments/assets/8ad88e5b-4f2d-4a5f-b028-e256bf68254d)
 
-Source your workspace:
+# Usage
 
-    source ~/ros2_ws/install/setup.bash
-
-Usage
-
-Connect your DualShock 4 controller (wired or wireless) and run:
-
+Connect your controller (wired or wireless) and run:
+```
 ros2 run joy_teleop_toggle joy_teleop_toggle
+```
+    
+- Press the **Circle button (Button 1)** to toggle teleoperation **ON/OFF**.
+- Use the **left joystick (vertical axis)** to move **forward/backward**.
+- Use the **right joystick (horizontal axis)** to **turn left/right**.
+- Press **R2 (Button 7)** to **increase linear speed**.
+- Press **L2 (Button 6)** to **decrease linear speed**.
+- Press **R1 (Button 5)** to **increase angular speed**.
+- Press **L1 (Button 4)** to **decrease angular speed**.
 
-    Press the Circle button (Button 1) to toggle teleoperation ON/OFF.
+🔔 **Current velocity scales will be printed in the terminal** whenever they are changed.
 
-    Use the left joystick (vertical axis) to move forward/backward.
+## . Button Mapping Summary
 
-    Use the right joystick (horizontal axis) to turn left/right.
+| Function                  | Button / Axis                        |
+|---------------------------|--------------------------------------|
+| Toggle Teleop ON/OFF      | 🔴 Circle (Button 1)                 |
+| Increase Linear Velocity  | R2 (Button 7)                        |
+| Decrease Linear Velocity  | L2 (Button 6)                        |
+| Increase Angular Velocity | R1 (Button 5)                        |
+| Decrease Angular Velocity | L1 (Button 4)                        |
+| Move Forward/Backward     | Left Joystick Vertical (axes[1])    |
+| Turn Left/Right           | Right Joystick Horizontal (axes[3]) |
 
-    Press R2 (Button 7) to increase linear speed.
 
-    Press L2 (Button 6) to decrease linear speed.
 
-    Press R1 (Button 5) to increase angular speed.
 
-    Press L1 (Button 4) to decrease angular speed.
-
-Current velocity scales will be printed in the terminal when changed.
-
-Button Mapping Summary
-Function	Button / Axis
-Toggle teleop	Circle (Button 1)
-Increase linear vel	R2 (Button 7)
-Decrease linear vel	L2 (Button 6)
-Increase angular vel	R1 (Button 5)
-Decrease angular vel	L1 (Button 4)
-Linear velocity	Left joystick vertical (axes[1])
-Angular velocity	Right joystick horizontal (axes[3])
 
 # Dependencies
 
