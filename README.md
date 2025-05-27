@@ -90,25 +90,14 @@ ros2 run joy_teleop_toggle joy_teleop_toggle
 
 
 
-
-# Dependencies
-
-    ROS 2 (tested on Humble/Foxy/Galactic)
-
-    joy package (for joystick driver)
-
-Install the joystick package if not installed:
-
-sudo apt install ros-<ros2-distro>-joy
-
 # License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/Oyefusi-Samuel/joy_teleop_toggle/blob/main/LICENSE) file for details.
 
 # Contributions
 
-Contributions and improvements are welcome! Please open issues or pull requests on [GitHub.](https://github.com/).
+Contributions and improvements are welcome! Please open issues or pull requests on [GitHub.](https://github.com/Oyefusi-Samuel/joy_teleop_toggle/pulls) [](https://github.com/Oyefusi-Samuel).
 
 # Acknowledgements
 
-Inspired by ROS [teleop_twist_joy](https://github.com/ros-drivers/joystick_drivers.git) and the Open robotics community efforts to improve robot joystick teleoperation.
+Inspired by ROS [teleop_twist_joy](https://github.com/ros-drivers/joystick_drivers.git) and the [Open robotics ](https://github.com/osrf)community efforts to improve robot joystick teleoperation.
