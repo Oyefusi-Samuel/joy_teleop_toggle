@@ -1,24 +1,37 @@
-![image](https://github.com/user-attachments/assets/1bd9bf31-95b7-4373-9061-cdef64b4b16a)
+![image](https://github.com/user-attachments/assets/1bd9bf31-95b7-4373-9061-cdef64b4b16a) 
 
-![image](https://github.com/user-attachments/assets/43c52ff0-15bb-43d6-b516-1b3c2463687e)  ![image](https://github.com/user-attachments/assets/cbc20e44-9ffc-4a4a-b2ff-ba822cb9cebd)  ![image](https://github.com/user-attachments/assets/005a1434-1fee-4fbb-9ddf-41639b779686)
+![image](https://github.com/user-attachments/assets/43c52ff0-15bb-43d6-b516-1b3c2463687e)  ![image](https://github.com/user-attachments/assets/cbc20e44-9ffc-4a4a-b2ff-ba822cb9cebd)  ![image](https://github.com/user-attachments/assets/005a1434-1fee-4fbb-9ddf-41639b779686) ![image](https://github.com/user-attachments/assets/361f126f-965d-4a9f-ac59-b7d2008ea6cb)
+
 ![image](https://github.com/user-attachments/assets/958560e6-67a2-41d0-9b7c-59c794101e9a)  ![image](https://github.com/user-attachments/assets/3444dcb2-10ac-40ec-8430-d80d7704de0d)
 
 
+A universal and lightweight ROS 2 Python node for joystick teleoperation with toggle control and dynamic velocity scaling.  
+Designed for **mobile robotics**, it supports all major controllers like DualShock 4, Xbox, and Logitech Gamepads — and is compatible with **ROS 2 Foxy, Galactic, Humble, Iron**, and more.
 
+---
 
-# joy_teleop_toggle
-A simple ROS 2 Python node for joystick teleoperation with toggle enable/disable and dynamic velocity scaling, optimized for DualShock 4 and any robot joystick controllers for mobile robotics.
+## ✨ Features
 
-Features include:
+- Toggle teleoperation ON/OFF with a button.
+- Control **linear velocity** using the left joystick.
+- Control **angular velocity** using the right joystick.
+- Dynamically adjust linear and angular velocity levels.
+- Debounced buttons to prevent accidental changes.
+- Automatically launches `joy_node` driver if needed.
+- Publishes to `/cmd_vel` using `geometry_msgs/Twist`.
 
-- Toggle teleoperation mode ON/OFF with a button press.
-- Use the left joystick to control **linear velocity** (forward/backward).
-- Use the right joystick to control **angular velocity** (left/right turns).
-- Adjust linear and angular velocity scales dynamically with controller buttons (L2/R2 for linear speed, L1/R1 for angular speed).
-- Debounced button presses for smooth velocity scaling.
-- Velocity levels persist while teleop is enabled.
-- Publishes `geometry_msgs/Twist` commands to `cmd_vel` topic.
-- Automatically starts the `joy_node` driver as a subprocess.
+---
+
+## 📦 Dependencies
+
+Ensure your system has:
+
+- ROS 2 (tested on Foxy, Galactic, Humble)
+- `joy` package (for joystick support)
+
+Install the joystick driver if not already available:
+```bash
+sudo apt install ros-<ros2-distro>-joy
 
 ---
 
@@ -35,6 +48,7 @@ Features include:
    ```bash
 cd ~/ros2_ws
 colcon build --packages-select joy_teleop_toggle --symlink-install
+Replace <ros2-distro> with your distribution (e.g. foxy, humble, iron).
 
 3. Source your workspace:
 
