@@ -30,3 +30,70 @@ Features include:
    cd ~/ros2_ws/src
    git clone https://github.com/yourusername/joy_teleop_toggle.git
 
+2. Build the package with colcon:
+
+   ```bash
+cd ~/ros2_ws
+colcon build --packages-select joy_teleop_toggle --symlink-install
+
+3. Source your workspace:
+
+source ~/ros2_ws/install/setup.bash
+
+Source your workspace:
+
+    source ~/ros2_ws/install/setup.bash
+
+Usage
+
+Connect your DualShock 4 controller (wired or wireless) and run:
+
+ros2 run joy_teleop_toggle joy_teleop_toggle
+
+    Press the Circle button (Button 1) to toggle teleoperation ON/OFF.
+
+    Use the left joystick (vertical axis) to move forward/backward.
+
+    Use the right joystick (horizontal axis) to turn left/right.
+
+    Press R2 (Button 7) to increase linear speed.
+
+    Press L2 (Button 6) to decrease linear speed.
+
+    Press R1 (Button 5) to increase angular speed.
+
+    Press L1 (Button 4) to decrease angular speed.
+
+Current velocity scales will be printed in the terminal when changed.
+
+Button Mapping Summary
+Function	Button / Axis
+Toggle teleop	Circle (Button 1)
+Increase linear vel	R2 (Button 7)
+Decrease linear vel	L2 (Button 6)
+Increase angular vel	R1 (Button 5)
+Decrease angular vel	L1 (Button 4)
+Linear velocity	Left joystick vertical (axes[1])
+Angular velocity	Right joystick horizontal (axes[3])
+
+# Dependencies
+
+    ROS 2 (tested on Humble/Foxy/Galactic)
+
+    joy package (for joystick driver)
+
+Install the joystick package if not installed:
+
+sudo apt install ros-<ros2-distro>-joy
+
+# License
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/Oyefusi-Samuel/joy_teleop_toggle/blob/main/LICENSE) file for details.
+
+# Contributions
+
+Contributions and improvements are welcome! Please open issues or pull requests on [GitHub.](https://github.com/).
+
+# Acknowledgements
+
+Inspired by ROS [teleop_twist_joy](https://github.com/ros-drivers/joystick_drivers.git) and the Open robotics community efforts to improve robot joystick teleoperation.
