@@ -33,7 +33,7 @@ Install the joystick driver if not already available:
 
 ```bash
 sudo apt install ros-<ros2-distro>-joy
-
+```
 ---
 
 ## Installation
